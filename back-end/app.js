@@ -8,7 +8,8 @@ import usersRoutes from './routes/usersRoutes.js';
 
 // MongoDB Connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.1:27017/ComputechDB');
+mongoose.connect('mongodb://127.0.0.1:27017/computech');
+
 const app = express();
 app.use(express.json());
 app.use(cors());
