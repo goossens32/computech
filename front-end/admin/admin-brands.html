@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/admin-brands.css">
+    <link rel="stylesheet" href="./css/sweetalert-custom.css">
+    <script defer src="./js/app-brand.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    
+    <div class="brand-container">
+
+        <div class="brand-table">
+            <div class="admin-brand-header">
+                <h1>Lista de marcas</h1>
+                <div class="input"><input type="text" placeholder="Busca una marca"></div>
+            </div>
+
+            <table class="admin-brand-table">
+                <thead>
+                    <tr style="text-align: left; height: 50px;">
+                        <th style="width: 10%; text-align: center;">#</th>
+                        <th style="width: 20%;">Nombre</th>
+                        <th style="width: 40%;">Descripción</th>
+                        <th style="width: 30%;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-container">
+                    
+                </tbody>
+            </table>
+
+        </div>
+
+        <form class="brand-form">
+            <h1>Formulario</h1>
+            <div class="brand-form-input-name">
+                <label for="">Nombre</label>
+                <input type="text" placeholder="Introduce un nombre" id="name-input">
+            </div>
+            <div class="brand-form-input-desc">
+                <label for="">Descripción</label>
+                <input type="textarea" placeholder="Introduce una descripción" id="desc-input">
+            </div>
+
+            <div class="brand-form-buttons">
+                <button id="btn-cancel" class="btn-cancel">Cancelar</button>
+                <button id="btn-insert" class="btn-insert d-inline">Insertar</button>
+                <button id="btn-update" class="btn-update d-none">Actualizar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
