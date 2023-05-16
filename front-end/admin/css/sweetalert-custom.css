@@ -1,0 +1,40 @@
+/* SWEETALERT2 CUSTOM CLASS -------------------------- */
+
+/* CONFIRM INSERT STYLES */
+
+
+/* WARNING DELETE STYLES */
+.modal-container, .modal-completed-container {
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+    width: 100% !important;
+}
+
+.popup-container, .popup-completed-container {
+    border-radius: 15px !important;
+}
+
+.modal-actions-container {
+    width: 80% !important;
+}
+
+.modal-confirm-button {
+    background-color: #455c4a !important;
+    border-radius: 15px !important;
+    width: 40% !important;
+} .modal-confirm-button:focus {box-shadow: 0 0 0 2px #89b692 !important;}
+
+.modal-cancel-button {
+    border-radius: 15px !important;
+    width: 40% !important;
+}
+
+.modal-confirmed-actions-container{
+    width: 80% !important;
+}
+
+.modal-confirmed-button {
+    border-radius: 15px !important;
+    background-color: #455c4a !important;
+    width: 50%;
+} .modal-confirmed-button:focus {box-shadow: 0 0 0 2px #89b692 !important;}
