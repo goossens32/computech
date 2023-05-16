@@ -15,7 +15,7 @@ const brandsSchema = new Schema ({
 
 brandsSchema.set('toJSON', {
     virtuals: true,
-    versionKey:false,
+    versionKey: false,
     transform: function (doc, ret) {   delete ret._id  }  
 });
 
