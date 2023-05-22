@@ -7,8 +7,8 @@ router.get('/models', modelsController.showAllModels);
 router.get('/models/search/:query', modelsController.searchModelsByName);
 router.get('/models/search/:minPrice/:maxPrice', modelsController.searchModelByPrice);
 router.get('/models/:idModel', modelsController.showModelById);
-router.post('/games', modelsController.newModel);
-router.put('/games', modelsController.updateModel);
-router.delete('/games/:idModel', modelsController.deleteModel);
+router.post('/models', modelsController.newModel);
+router.put('/models', modelsController.updateModel);
+router.delete('/models/:idModel', modelsController.deleteModel);
 
 export default router;
