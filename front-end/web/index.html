@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./js/app.js" type="module"></script>
+</head>
+<body>
+     <!-- HEADER CONTENT -->
+     <header>
+        <div class="logo"><img src="./img/computech-logo.png" alt=""><a href="../admin/index.html"><h1>COMPUTECH</h1></a></div>
+        <div class="input-header-container"><input type="text" placeholder="Buscar"></div>
+        <!-- NAV -->
+        <div class="header-nav">
+            <a href="#">Inicio</a>
+            <a href="#">Contacto</a>
+            <a href="">
+                <div class="user">
+                    <p>Usuario</p>
+                    <i class="fa-solid fa-user fa-xl"></i>
+                </div>
+            </a>
+            <a href="">
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                    <div class="cart-item-counter"><p>2</p></div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <aside class="filter-container">
+            <h1>Filtros</h1>
+            <div class="order-by">
+                <label for="">Ordenar por</label>
+                <select name="" id="order-by-select">
+                    <option value="">A - Z</option>
+                    <option value="">Z - A</option>
+                    <option value="">Por precio descendente</option>
+                    <option value="">Por precio ascendente</option>
+                </select>
+            </div>
+
+            <div class="price-filter">
+                <label for="">Precio:</label>
+                <div class="range-ouput">
+                    <input type="range" min="0" max="3000" value="0" name="" id="price-range" oninput="price.value = this.value">
+                    <output id="price"></output>
+                </div>
+                
+            </div>
+
+        </aside>
+
+        <section class="grid-container">
+            GRID CONTAINER
+        </section>
+        
+    </main>
+    
+</body>
+</html>

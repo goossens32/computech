@@ -1,0 +1,142 @@
+/* GFONTS ROBOTO */     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+/* GFONTS BebasNeue*/   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* CDN FontAwesome*/    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', 'Arial';}
+body {background-color: #abdeb6;}
+
+/* HEADER STYLES ------------------------------- */
+header {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #abdeb6;
+}
+
+/* FLEX BASIS */
+.logo {flex-basis: 15%;}
+.input-header-container {flex-basis: 20%;}
+.header-nav {flex-basis: 30%;}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 4rem;
+}
+.logo img {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 1rem;
+}
+.logo a{text-decoration: none;}
+.logo a h1 {
+    font: normal 48px 'Bebas Neue';
+    color: rgb(46, 46, 46);
+    padding-top: .2rem;
+}
+
+.input-header-container {
+    margin: 0 4.2rem 0 4rem;
+}
+.input-header-container input {
+    padding: .4rem .8rem;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    background-color: #d7f5de;
+}
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+
+    margin-right: 4rem;
+}
+.header-nav a{
+    font: normal 18px 'Roboto';
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+    transition: .1s ease;
+}
+.header-nav a:hover{
+    color: white;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.user p {
+    font: normal 18px 'Roboto';
+    margin-right: 1rem;
+}
+.user .fa-user{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(46, 46, 46);
+    border-radius: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #abdeb6;
+}
+.cart{
+    position: relative;
+}
+.cart-item-counter{
+    position: absolute;
+    top: 1.8rem;
+    right: -1rem;
+
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #6c8f73;
+    color: white;
+    font: bold 14px 'Roboto';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart .fa-cart-shopping {
+    color: rgb(46, 46, 46);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* MAIN STYLES ------------------------------- */
+main {
+    width: 96%;
+    margin: .2rem auto 0 auto;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* FLEX BASIS */
+.filter-container{flex-basis: 25%;}
+.grid-container{flex-basis: 75%;}
+
+
+/* FILTER STYLES ------------------------------- */
+.filter-container {
+    background-color: #6c8f73;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 2rem;
+}
