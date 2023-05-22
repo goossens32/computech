@@ -1,7 +1,9 @@
-export default class Modal {
+import {deleteModel} from "../app-models.js";
 
-    // Modal de confirmación de insert
-    static confirmInsert() {
+export default class ModalModel {
+
+    // Modal de elemento insertado
+    static confirmedInsert() {
         Swal.fire({
             title: 'Elemento insertado',
             text: 'Elemento insertado correctamente en la base de datos',
@@ -19,9 +21,28 @@ export default class Modal {
             }
         })
     }
+   
+    static confirmedUpdate(){
+        Swal.fire({
+            title: 'Elemento actualizado',
+            text: 'Elemento actualizado correctamente en la base de datos',
+            icon: 'success',
+            showCancelButton : false,
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                container: 'modal-container',
+                popup: 'popup-container',
+                confirmButton: 'modal-confirm-button',
+                actions: 'modal-actions-container'
+            },
+            showClass: {
+                popup: 'no-animation'
+            }
+        })
+    }
 
-    // Modal de confirmación para eliminar elemento
-    static waringDelete() {
+    // Modal de confirmación para eliminar elemento, si no se confirma no ejecuta deleteBrand()
+    static waringDelete(id) {
         Swal.fire ({
             title: 'Atención',
             text: 'Vas a eliminar un elemento de la base de datos',
@@ -41,6 +62,7 @@ export default class Modal {
             }
         }).then((result) => {
             if (result.isConfirmed) {
+                deleteModel(id);
                 Swal.fire({
                     icon: 'success',
                     title: 'Operación completada',
