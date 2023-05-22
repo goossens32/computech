@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/admin-brands.css">
     <script defer src="./js/main-app.js" type="module"></script>
 </head>
 <body>
     <!-- HEADER CONTENT -->
     <header>
-        <div class="logo"><img src="./img/computech-logo.png" alt=""><h1>COMPUTECH</h1></div>
+        <div class="logo"><img src="./img/computech-logo.png" alt=""><a href="../web/index.html"><h1>COMPUTECH</h1></a></div>
         <div class="input-header-container"><input type="text" placeholder="Buscar"></div>
         <!-- NAV -->
         <div class="header-nav">
@@ -34,19 +33,21 @@
     </header>
 
     <main>
-       <div class="admin-container">
 
+       <div class="admin-container">
+        <!-- ADMIN MENU CONTENT -->
         <section class="admin-menu">
             <h1>MENÚ</h1>
             <ul>
-                <li><a href="" class="nav-item" data-link="BRANDS" aria-current="page">Marcas</a></li>
-                <li><a href="" class="nav-item" data-link="MODELS">Modelos</a></li>
-                <li><a href="" class="nav-item">Especificaciones</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page" data-link="BRANDS">Marcas</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white" data-link="MODELS">Modelos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white" data-link="SPECS">Especificaciones</a></li>
             </ul>
         </section>
 
+        <!-- ADMIN TABLE / FORM CONTENT -->
         <section class="page">
-            <iframe id="current" src="./admin-brands.html" width="100%" height="800px"></iframe>
+            <iframe id="current-page" src="./admin-brands.html" width="100%" height="800px"></iframe>
         </section>
 
        </div>

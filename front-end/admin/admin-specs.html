@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/admin-page.css">
+    <link rel="stylesheet" href="./css/sweetalert-custom.css">
+    <script defer src="./js/app-specs.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="admin-container">
+            <div class="admin-container-header">
+                <h1>Lista de especificaciones</h1>
+                <div class="input"><input id="search-input" type="text" placeholder="Busca una modelo por especificación"></div>
+            </div>
+
+            <section class="admin-list-table" id="body-container" style="border: none;">
+                
+            </section>
+
+        </div>
+
+        <form class="form">
+            <h1>Formulario</h1>
+            <div class="form-input">
+                <label for="">Modelo</label>
+                <select name="model-select" id="model-select">
+                    <!-- Options inyectado con JS -->
+                </select>
+            </div>
+            <div class="form-input">
+                <label for="">Sistema Operativo</label>
+                <input type="text" placeholder="Introduce un S.O" id="os-input">
+            </div>
+            <div class="form-input">
+                <label for="">Procesador</label>
+                <input type="text" placeholder="Introduce el procesador" id="cpu-input">
+            </div>
+            <div class="form-input">
+                <label for="">RAM</label>
+                <input type="text" placeholder="Introduce la memoria RAM" id="ram-input">
+            </div>
+            <div class="form-input">
+                <label for="">Almacenamiento</label>
+                <input type="text" placeholder="Introduce el almacenamiento" id="storage-input">
+            </div>
+            <div class="form-input">
+                <label for="">Pantalla</label>
+                <input type="text" placeholder="Introduce la resolución de pantalla" id="screen-input">
+            </div>
+            <div class="form-input">
+                <label for="">Batería</label>
+                <input type="text" placeholder="Introduce la batería" id="battery-input">
+            </div>
+        
+            <div class="form-buttons">
+                <button id="btn-cancel" class="btn-cancel">Cancelar</button>
+                <button id="btn-insert" class="btn-insert d-inline">Insertar</button>
+                <button id="btn-update" class="btn-update d-none">Actualizar</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
