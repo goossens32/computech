@@ -28,7 +28,7 @@ export const searchModelsByName = async (req, res) => {
 export const searchModelsByBrand = async (req, res) => {
     try {
         const { query } = req.params;
-        const documents = await Models.find({ brand:ObjectId(req.params.idCategory)}).populate("brand");      
+        const documents = await Models.find({ brand:ObjectId(req.params.idBrand)}).populate("brand");      
         res.json(documents);
 
     } catch (error) {
