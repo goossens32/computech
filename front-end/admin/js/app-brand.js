@@ -1,8 +1,9 @@
-import BrandService from "./services/brandService.js";
-import Modal from "../js/components/Modal.js";
+import BrandService from "./services/brandServices.js";
+import Modal from "./components/ModalBrands.js";
 
 const bodyContainer = document.querySelector('#tbody-container');
-const formItems =  document.querySelector('.brand-form');
+const searchInput = document.querySelector('#search-input');
+const formItems =  document.querySelector('.form');
 const btnInsert = document.querySelector('#btn-insert');
 const btnUpdate = document.querySelector('#btn-update');
 const btnCancel = document.querySelector('.btn-cancel');
@@ -55,9 +56,12 @@ const updateBrand = () => {
     btnUpdate.classList.replace("d-inline", "d-none");
 }
 
-const deleteBrand = (id) => {
-    Modal.waringDelete();
-    // --------------------------------------------------
+const warningDelete = (id) => {
+    Modal.waringDelete(id);
+}
+
+// Función lanzada por Modal.waringDelete sólo si se acepta el modal
+export const deleteBrand = (id) => {
     BrandService.delete(id).then(data => {
         console.log(data);
         renderBrands();
@@ -95,7 +99,7 @@ const populateTableBrands = (items) => {
         button.addEventListener("click", function () {
             let id = this.id.split("-")[2];
             console.log(id);
-            deleteBrand(id);
+            warningDelete(id);
         })
     });
 
@@ -125,6 +129,17 @@ const renderBrands = (search) => {
     }
 }
 
+const searchBrand = (event) => {
+    event.preventDefault();
+    const input = event.target;
+    if (input.value.length >= 3) {
+        let nameSearch = input.value.toLowerCase();
+        renderBrands(nameSearch);
+    } else if (input.value.length == 0) {
+        renderBrands();
+    }
+}
+
 const init = () => {
     renderBrands();
 
@@ -132,6 +147,7 @@ const init = () => {
     btnCancel.addEventListener('click', function() {
         formItems.reset();
     })
+    searchInput.addEventListener('keyup', searchBrand);
     btnInsert.addEventListener('click', validateForm);
     btnUpdate.addEventListener('click', validateForm);
 }
