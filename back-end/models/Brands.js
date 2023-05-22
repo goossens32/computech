@@ -8,10 +8,12 @@ const brandsSchema = new Schema ({
     },
     description: {
         type: String,
-        default: 'Sin descripción'
+        required: false
     }
 },
-{ versionKey: false });
+{ versionKey: false }
+);
+
 
 brandsSchema.set('toJSON', {
     virtuals: true,
