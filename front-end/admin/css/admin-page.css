@@ -1,0 +1,187 @@
+/* GFONTS ROBOTO */     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+/* CDN FontAwesome*/    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto';}
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 3rem;
+}
+
+/* FLEX BASIS */
+.admin-container    {flex-basis: 70%;}
+.form     {flex-basis: 25%;}
+
+.admin-container-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.admin-container-header h1 {
+    font: bold 28px 'Roboto';
+    margin-right: 2rem;
+}
+
+.admin-container-header .input {
+    width: 30%;
+}
+
+.admin-container-header .input input {
+    padding: .4rem .8rem;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    background-color: rgb(239, 240, 239);
+}
+
+/* TABLE STYLES -------------------------------------------------------------- */
+.admin-list-table {
+    border: 1px solid rgb(239, 240, 239);
+    border-radius: 15px;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.admin-list-table thead tr {
+    border-bottom: 1px solid black;
+}
+
+.admin-list-table tbody tr td {
+    padding-bottom: .8rem;
+}
+
+/* CARD STYLES FOR SPECS ADMIN PAGE -------------------------------*/
+#body-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+.card {
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid rgba(219, 219, 219, 0.63);
+    border-radius: 15px;
+}
+.card h2 {
+    margin-bottom: 1rem;
+    font: bold 20px 'Roboto';
+}
+
+.columns {
+    display: flex;
+    align-items: center;
+}
+/* FLEX BASIS */
+.column1 {flex-basis: 45%;}
+.column2 {flex-basis: 50%;}
+
+.column1 p {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+.column2 p {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+/* DELETE, EDIT BUTTONS */
+.btn-delete, .btn-edit {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+
+    text-align: center;
+    padding: .8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-delete {
+    margin-right: 1rem;
+    background-color: rgb(204, 79, 79);
+    color: white;
+    transition: .1s ease;
+} .btn-delete:hover {cursor: pointer; background-color: rgb(202, 35, 35);}
+
+.btn-edit {
+    background-color: #6c8f73;
+    color: white;
+    transition: .1s ease;
+} .btn-edit:hover {cursor: pointer; background-color:#455c4a;}
+
+
+/* FORM STYLES -------------------------------------------------------------- */
+.form {
+    border-left: 1px solid rgba(219, 219, 219, 0.63);
+    padding-left: 2rem;
+    margin-left: 3rem;
+    width: 100%;
+}
+
+.form h1 {
+    width: 50%;
+    margin-bottom: 2rem;
+    font: bold 28px 'Roboto';
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-input label {
+    margin: 0 0 1rem .5rem;
+}
+
+.form-input input, .form-input select {
+    padding: .4rem .8rem;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    background-color: rgb(239, 240, 239);
+    margin-bottom: 2rem;
+}
+
+.form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form-buttons button {
+    border: none;
+    border-radius: 15px;
+    padding: .5rem .4rem;
+    width: 35%;
+    margin-top: 1rem;
+    font: bold 14px 'Roboto';
+}
+
+#brand-select{
+    font: normal 14px 'Roboto';
+}
+#brand-select>option{
+    font: normal 14px 'Roboto';
+}
+
+.btn-cancel {
+    margin-right: 1rem;
+    transition: .1s ease;
+} .btn-cancel:hover {cursor: pointer;}
+
+.btn-insert, .btn-update {
+    background-color: #6c8f73;
+    color: white;
+    transition: .1s ease;
+} .btn-insert:hover, .btn-update:hover {cursor: pointer; background-color: #455c4a;}
+
+.d-inline {display: inline;}
+.d-none {display: none;}
