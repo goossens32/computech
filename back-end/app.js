@@ -4,6 +4,7 @@ import cors from "cors";
 
 import brandsRoutes from './routes/brandsRoutes.js';
 import modelsRoutes from './routes/modelsRoutes.js';
+import specsRoutes from './routes/specsRoutes.js';
 import usersRoutes from './routes/usersRoutes.js';
 
 // MongoDB Connection
@@ -17,6 +18,7 @@ app.use(cors());
 // Routes
 app.use("/api", brandsRoutes);
 app.use("/api", modelsRoutes);
+app.use("/api", specsRoutes);
 app.use("/api", usersRoutes);
 
 // DB Connection Control
