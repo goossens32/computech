@@ -14,6 +14,7 @@ const nameInput = document.querySelector('#name-input');
 const priceInput = document.querySelector('#price-input');
 const stockInput = document.querySelector('#stock-input');
 const descInput = document.querySelector('#desc-input');
+const imgInput = document.querySelector('#img-input');
 const brandInput = document.querySelector('#brand-select');
 
 let currentModel = null;
@@ -23,8 +24,9 @@ const newModel = () => {
     const price = priceInput.value;
     const stock = stockInput.value;
     const description = descInput.value;
+    const img = imgInput.value; 
     const brand = brandInput.value;
-    const newModel = {name, price, stock, description, brand};
+    const newModel = {name, price, stock, description, img, brand};
 
     ModalModel.confirmedInsert();
     // --------------------------------------------------
@@ -42,6 +44,7 @@ const editModel = (id) => {
         nameInput.value = data.name;
         priceInput.value = data.price;
         stockInput.value = data.stock;
+        imgInput.value = data.img;
         descInput.value = data.description;
     });
     btnInsert.classList.replace("d-inline", "d-none");
@@ -54,8 +57,9 @@ const updateModel = () => {
     const price = priceInput.value;
     const stock = stockInput.value;
     const description = descInput.value;
+    const img = imgInput.value;
     const brand = brandInput.value;
-    const newModel = {id, name, price, stock, description, brand};
+    const newModel = {id, name, price, stock, description, img, brand};
     console.log(newModel);
 
     ModalModel.confirmedUpdate();

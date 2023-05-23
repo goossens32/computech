@@ -193,6 +193,10 @@ main {
     border-bottom-left-radius: 15px;
     padding: 2rem;
 }
+.filter-container label {
+    color: white;
+    font: bold 16px 'Roboto';
+}
 .filter-container h1 {
     margin-bottom: 2rem;
     text-align: center;
@@ -215,16 +219,13 @@ main {
 .price-filter label {
     margin:0 0 1rem .5rem;
 }
-.range-output {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-} 
-#price {margin-left: 1rem;}
+#price-slider {
+    margin:1rem 0 4rem 0;
+}
 #accordion{
     width: 100%;
     text-align: left;
-    margin:2rem 0 1rem 0;
+    margin:1rem 0;
     padding: .4rem .8rem;
     border-radius: 15px;
     border: none;
@@ -266,9 +267,16 @@ main {
     padding: 0 !important;
     height: 180px;
     width: auto;
-    background-color: grey;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+.laptop-img img {
+    display: block;
+    margin: 0 auto 0 auto;
+
+    background-size: cover;
+    width: auto;
+    height: 180px;
 }
 .card h2 {
     margin: 1rem 0 .2rem 0;

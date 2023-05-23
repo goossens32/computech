@@ -22,6 +22,10 @@ const modelsSchema = new Schema ({
         required: true,
         default: 0
     },
+    img: {
+        type: String,
+        required: true
+    },
     brand: {
         type: mongoose.Schema.ObjectId,
         ref: 'Brands'
