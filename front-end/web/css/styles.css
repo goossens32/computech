@@ -49,24 +49,27 @@ header {
     width: 100%;
     background-color: #d7f5de;
 }
-.header-nav{
+.header-nav {
+    margin-left: auto;
+    margin-right: 4rem;
+}
+.header-nav ul{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-left: auto;
-
-    margin-right: 4rem;
+    list-style: none;
 }
-.header-nav a{
+.header-nav a, .header-nav ul>li p{
     font: normal 18px 'Roboto';
     color: rgb(46, 46, 46);
     text-decoration: none;
     transition: .1s ease;
 }
-.header-nav a:hover{
+.header-nav a:hover, .header-nav .user p:hover{
+    cursor: pointer;
     color: white;
 }
-
 .user {
     display: flex;
     align-items: center;
@@ -87,29 +90,78 @@ header {
     justify-content: center;
     color: #abdeb6;
 }
-.cart{
+.li-relative{
     position: relative;
 }
+#cart-button {
+    background-color: #abdeb6;
+    border: none;
+}
+#cart-button:hover{cursor: pointer;}
+#cart-button .fa-cart-shopping {
+    color: rgb(46, 46, 46);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-container {
+    position: absolute;
+    top: 4rem;
+    left: -15.5rem;
+    z-index: 10;
+    display: none;
+
+    padding: 1rem;
+    background-color: white;
+    width: 350px;
+    border-radius: 15px;
+    border: 1px solid rgba(190, 190, 190, 0.564);
+    box-shadow: 14px 16px 31px -3px rgba(0,0,0,0.1)
+}
+.cart-items {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    font: normal 14px 'Roboto';
+}
+.total-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+.total-button button {
+    width: 5rem;
+    margin-left: 1rem;
+    padding: .2rem;
+
+    background-color: #6c8f73;
+    font: bold 14px 'Roboto';
+    color: white;
+    border: none;
+    border-radius: 15px;
+    transition: .2s ease;
+}
+.total-button button:hover {
+    cursor: pointer;
+    background-color: #8ab593;
+}
+/* Cuando se pulsa en carrito pasa de display none a block en JS */
+.show {display: block;}
+
 .cart-item-counter{
     position: absolute;
-    top: 1.8rem;
+    top: 1rem;
     right: -1rem;
 
     width: 25px;
     height: 25px;
     border-radius: 50%;
     background-color: #6c8f73;
-    color: white;
     font: bold 14px 'Roboto';
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.cart .fa-cart-shopping {
-    color: rgb(46, 46, 46);
-    width: 40px;
-    height: 40px;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,14 +171,15 @@ header {
 /* MAIN STYLES ------------------------------- */
 main {
     width: 96%;
-    margin: .2rem auto 0 auto;
+    height: 100%;
+    margin: .2rem auto 2rem auto;
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
+.col {flex: 1;}
 
 /* FLEX BASIS */
 .filter-container{flex-basis: 25%;}
@@ -139,4 +192,154 @@ main {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 2rem;
+}
+.filter-container h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.order-by {
+    display: flex;
+    flex-direction: column;
+}
+.order-by label {
+    margin:0 0 1rem .5rem;
+}
+.order-by select {
+    padding: .4rem .8rem;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    background-color: rgb(239, 240, 239);
+    margin-bottom: 2rem;
+}
+.price-filter label {
+    margin:0 0 1rem .5rem;
+}
+.range-output {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+} 
+#price {margin-left: 1rem;}
+#accordion{
+    width: 100%;
+    text-align: left;
+    margin:2rem 0 1rem 0;
+    padding: .4rem .8rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #abdeb6;
+
+    display: flex;
+    align-items: center;
+    transition: .2s ease;
+}
+#accordion p {font: normal 13px 'Roboto'; color: black;}
+#accordion i {margin-left: auto; color: rgb(46, 46, 46);}
+#accordion:hover {
+    cursor: pointer;
+    background-color: #c0f6cc;
+}
+
+.brand-list {
+    display: none;
+    margin-bottom: 2rem;
+}
+.brand-list>label{
+    margin-left:.5rem ;
+}
+
+/* GRID STYLES ------------------------------- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+/* CARD STYLES */
+.card {
+    border: 1px solid rgba(190, 190, 190, 0.564);
+    border-radius: 15px;
+    padding: .5rem;
+}
+.laptop-img {
+    padding: 0 !important;
+    height: 180px;
+    width: auto;
+    background-color: grey;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card h2 {
+    margin: 1rem 0 .2rem 0;
+    font: bold 20px 'Roboto';
+}
+.card h3 {
+    font: normal 16px 'Roboto';
+}
+.card h4 {
+    margin: 1rem 0 .5rem 0;
+    font: bold 18px 'Roboto';
+    color: #6c8f73;
+}
+.card-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.add-to-cart {
+    color: rgb(241, 241, 241);
+    background-color: #6c8f73;
+    transition: .2s ease;
+}
+.add-to-cart:hover{
+    cursor: pointer;
+    background-color: #8ab593;
+}
+
+/* FLEX BASIS CARD BUTTONS */
+.btn-more-info {flex-basis: 70%; margin-right: 1rem;}
+.add-to-cart {flex-basis: 30%;}
+
+/* CARD BUTTONS */
+.btn-more-info, .add-to-cart{
+    padding: .4rem 0;
+    border: none;
+    border-radius: 15px;
+}
+/* Cursor pointer en ambos botones */
+.btn-more-info:hover, .add-to-cart:hover{
+    cursor: pointer;
+}
+
+/* LAPTOP RES MEDIA QUERIES */
+@media (max-width: 1366px){
+    header {
+        height: 4rem;
+    }
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    .logo a h1 {
+       font: normal 36px 'Bebas Neue';
+    }
+    .input-header-container{
+        flex-basis: 30%;
+    }
+    .header-nav a, .header-nav ul li p {
+        font: normal 16px 'Roboto';
+    }
+    .user .fa-user{
+        width: 30px;
+        height: 30px;
+    }
+    .user i {font-size: 16px;}
+    .cart i {font-size: 26px;}
+    .cart-item-counter {
+        top: 1.5rem;
+        width: 20px;
+        height: 20px;
+        right: -.3rem;
+    } .cart-item-counter p {font: normal 14px 'Roboto' !important;}
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/checkbox.css">
     <script defer src="./js/app.js" type="module"></script>
 </head>
 <body>
@@ -15,20 +16,32 @@
         <div class="input-header-container"><input type="text" placeholder="Buscar"></div>
         <!-- NAV -->
         <div class="header-nav">
-            <a href="#">Inicio</a>
-            <a href="#">Contacto</a>
-            <a href="">
-                <div class="user">
-                    <p>Usuario</p>
-                    <i class="fa-solid fa-user fa-xl"></i>
-                </div>
-            </a>
-            <a href="">
-                <div class="cart">
-                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>
-                    <div class="cart-item-counter"><p>2</p></div>
-                </div>
-            </a>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li>
+                    <div class="user">
+                        <p>Usuario</p>
+                        <i class="fa-solid fa-user fa-xl"></i>
+                    </div>
+                </li>
+                <li class="li-relative">
+                    <button id="cart-button"><i class="fa-solid fa-cart-shopping fa-2xl"></i></button>
+                    <div class="cart-container" id="dropdown-content">
+                        <div class="cart-items">
+                           
+                        </div> 
+                        <div class="total-button">
+                            <div class="total">Total €</div>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="cart-item-counter"><p>2</p></div>
+                    </div>
+                </li>                
+            </ul>
+
         </div>
     </header>
 
@@ -52,13 +65,83 @@
                     <input type="range" min="0" max="3000" value="0" name="" id="price-range" oninput="price.value = this.value">
                     <output id="price"></output>
                 </div>
-                
             </div>
+
+            <div id="accordion" class="brands-list-filter">
+                <p>Lista de marcas</p>
+                <i class="fa-solid fa-chevron-down fa-2xs"></i>
+            </div>
+                <div class="brand-list">
+                    
+                </div>
+            
+                <div class="filter-buttons">
+                    <button>Aplicar</button>
+                </div>
 
         </aside>
 
         <section class="grid-container">
-            GRID CONTAINER
+            <div class="card">
+                <div class="laptop-img"><img src="" alt=""></div>
+                <h2>Brand</h2>
+                <h3>Model</h3>
+                <h4>Precio €</h4>
+                <div class="card-buttons">
+                    <button id="btn-more-info">Ver más...</button>
+                    <button id="add-to-cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="laptop-img"><img src="" alt=""></div>
+                <h2>Brand</h2>
+                <h3>Model</h3>
+                <h4>Precio €</h4>
+                <div class="card-buttons">
+                    <button id="btn-more-info">Ver más...</button>
+                    <button id="add-to-cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="laptop-img"><img src="" alt=""></div>
+                <h2>Brand</h2>
+                <h3>Model</h3>
+                <h4>Precio €</h4>
+                <div class="card-buttons">
+                    <button id="btn-more-info">Ver más...</button>
+                    <button id="add-to-cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="laptop-img"><img src="" alt=""></div>
+                <h2>Brand</h2>
+                <h3>Model</h3>
+                <h4>Precio €</h4>
+                <div class="card-buttons">
+                    <button id="btn-more-info">Ver más...</button>
+                    <button id="add-to-cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="laptop-img"><img src="" alt=""></div>
+                <h2>Brand</h2>
+                <h3>Model</h3>
+                <h4>Precio €</h4>
+                <div class="card-buttons">
+                    <button id="btn-more-info">Ver más...</button>
+                    <button id="add-to-cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="laptop-img"><img src="" alt=""></div>
+                <h2>Brand</h2>
+                <h3>Model</h3>
+                <h4>Precio €</h4>
+                <div class="card-buttons">
+                    <button id="btn-more-info">Ver más...</button>
+                    <button id="add-to-cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></button>
+                </div>
+            </div>
         </section>
         
     </main>
