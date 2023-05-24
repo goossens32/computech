@@ -101,14 +101,12 @@ main {
 
 /* ADMIN-CONTAINER STYLE -------------------- */
 .admin-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 100%;
 }
 
-/* FLEX BASIS */
-.admin-menu {flex-basis: 20%;}
-.page {flex-basis: 80%; height: calc(100vh)}
+.page{width: 100%;}
 iframe {border: none;}
 
 /* MENU STYLES -------------------------------*/
@@ -117,7 +115,6 @@ iframe {border: none;}
     background-color: #6c8f73;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
-    height: calc(100vh);
 }
 .admin-menu h1 {
     font: bold 32px 'Roboto';

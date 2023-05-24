@@ -66,7 +66,7 @@ header {
     text-decoration: none;
     transition: .1s ease;
 }
-.header-nav a:hover, .header-nav .user p:hover{
+.header-nav a:hover{
     cursor: pointer;
     color: white;
 }
@@ -93,6 +93,97 @@ header {
 .li-relative{
     position: relative;
 }
+/* LOGIN STYLES */
+.login-container {
+    position: absolute;
+    display: none;
+    top: 3.8rem;
+    left: -7.3rem;
+    z-index: 10;
+
+    padding: 1rem;
+    background-color: white;
+    width: 300px;
+    border-radius: 15px;
+    border: 1px solid rgba(190, 190, 190, 0.564);
+    box-shadow: 14px 16px 31px -3px rgba(0,0,0,0.1)
+}
+#user-button {background-color: #abdeb6; border: none; transition: .2s ease;}
+#user-button:hover {cursor: pointer;}
+#user-button>p:hover{color: white;}
+
+.login-container div h4 {
+    font: bold 16px 'Roboto';
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.email-input, .password-input {
+    width: 80%;
+    margin: 0 auto;
+}
+.login-input input, .register-input input {
+    padding: .4rem .8rem;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    background-color: rgb(239, 240, 239);
+    margin-bottom: 1.5rem;
+}
+.btn-login {
+    text-align: right;
+}
+#login-button {
+    border: none;
+    width: 100px;
+    background-color: #6c8f73;
+    font: bold 12px 'Roboto';
+    color: white;
+    padding: .4rem 0;
+    border-radius: 15px;
+    transition: .2 ease;
+}
+#login-button:hover {
+    cursor: pointer;
+    background-color: #8ab593;
+}
+.register-text {width: 80%; margin: 1rem auto;}
+.register-text button {
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+.register-text button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #6c8f73;
+}
+.register-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.register-buttons button {
+    width: 40%;
+    border: none;
+    width: 100px;
+    font: bold 12px 'Roboto';
+    padding: .4rem 0;
+    border-radius: 15px;
+    transition: .2s ease;
+}
+.register-buttons button:hover {
+    cursor: pointer;
+}
+.register-buttons #cancel-register {
+    color: rgb(46, 46, 46);
+}
+.register-buttons #register {
+    background-color: #6c8f73;
+    color: white;
+} #register:hover {background-color: #8ab593;}
+
+/* CART STYLES */
 #cart-button {
     background-color: #abdeb6;
     border: none;
@@ -129,6 +220,7 @@ header {
     padding: .5rem;
     border-radius: 10px;
 } .cart-list-titles p {color: white !important;}
+
 .cart-item {
     display: flex;
     justify-content: space-evenly;

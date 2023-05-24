@@ -9,7 +9,7 @@ const links = {
 const handleLinks = () => {
     const items = document.querySelectorAll('.nav-link');
     items.forEach(e => {
-        e.addEventListener("click", function(event) {
+        e.addEventListener("click", function() {
             document.querySelector('#current-page').src=links[this.dataset.link];
         })
     });

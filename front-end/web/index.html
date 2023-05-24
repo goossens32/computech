@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/checkbox.css">
     <script defer src="./js/app.js" type="module"></script>
+    <script defer src="./js/user.js" type="module"></script>
 </head>
 <body>
      <!-- HEADER CONTENT -->
@@ -19,15 +20,18 @@
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Contacto</a></li>
-                <li>
-                    <div class="user">
-                        <p>Usuario</p>
+                <li class="li-relative">
+                    <button class="user" id="user-button">
+                        <p id="username">Invitado</p>
                         <i class="fa-solid fa-user fa-xl"></i>
+                    </button>
+                    <div class="login-container" id="dropdown-user">
+                        
                     </div>
                 </li>
                 <li class="li-relative">
                     <button id="cart-button"><i class="fa-solid fa-cart-shopping fa-2xl"></i></button>
-                    <div class="cart-container" id="dropdown-content">
+                    <div class="cart-container" id="dropdown-cart">
                         <div class="cart-list-titles">
                             <p class="cart-col1">Modelo</p>
                             <p class="cart-col2">Cantidad</p>

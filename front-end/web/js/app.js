@@ -101,7 +101,7 @@ const addItemToCart = (id) => {
             const newItem = { name, quantity, price };
             cartItems.push(newItem);
             // El contador de items de carrito se va sumando cada vez que añado un item
-            cartCounter += cartItems.length;
+            cartCounter = cartItems.length;
         }
 
         cartTotal += price * quantity;
@@ -109,6 +109,20 @@ const addItemToCart = (id) => {
         renderCart();
     });
 }
+
+const removeItemFromCart = (itemName) => {
+    const itemIndex = cartItems.findIndex((item) => item.name === itemName);
+    if (itemIndex !== -1) {
+        const item = cartItems[itemIndex];
+        // Resta al total el precio * cantidad cuando se eliminta
+        cartTotal -= item.price * item.quantity;
+        cartItems.splice(itemIndex, 1);
+        cartCounter = cartItems.length;
+        renderCart();
+    }
+    cartItemCounter.textContent = cartCounter;
+};
+
 
 const renderCart = () => {
     cartItemsContainer.innerHTML = "";
@@ -137,20 +151,6 @@ const renderCart = () => {
     });
     cartItemCounter.textContent = cartCounter;
 }
-
-const removeItemFromCart = (itemName) => {
-    const itemIndex = cartItems.findIndex((item) => item.name === itemName);
-    if (itemIndex !== -1) {
-        const item = cartItems[itemIndex];
-        // Resta al total el precio * cantidad cuando se eliminta
-        cartTotal -= item.price * item.quantity;
-        cartItems.splice(itemIndex, 1);
-        cartCounter -= item.quantity;
-        renderCart();
-    }
-    cartItemCounter.textContent = cartCounter;
-};
-
 
 const handleFilter = () => {
     // Aplico filtro según el value de select>option de HTML
@@ -210,10 +210,18 @@ const handleBrandAccordion = () => {
 };
 
 const handleCartDropdown = () => {
-    const cartButton = document.getElementById('cart-button');
-        const dropdownContent = document.getElementById('dropdown-content');
-        cartButton.addEventListener('click', function() {
-        dropdownContent.classList.toggle('show')
+    const cartButton = document.querySelector('#cart-button');
+    const dropdownCart = document.querySelector('#dropdown-cart');
+    cartButton.addEventListener('click', function() {
+        dropdownCart.classList.toggle('show')
+    })
+}
+
+const handleUserDropdown = () => {
+    const userButton = document.querySelector('#user-button');
+    const dropdownUser = document.querySelector('#dropdown-user');
+    userButton.addEventListener('click', function(){
+        dropdownUser.classList.toggle('show');
     })
 }
 
@@ -224,6 +232,7 @@ const init = () => {
     // Controladores de elementos de página
     handleBrandAccordion();
     handleCartDropdown();
+    handleUserDropdown();
 
     filterOption.addEventListener('change', handleFilter);
 }
