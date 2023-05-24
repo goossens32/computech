@@ -29,6 +29,10 @@ const modelsSchema = new Schema ({
     brand: {
         type: mongoose.Schema.ObjectId,
         ref: 'Brands'
+    },
+    specs: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'Specs'
     }
 },
 { versionKey: false });
@@ -40,4 +44,5 @@ modelsSchema.set('toJSON', {
 });
 
 const Models = mongoose.model('Models', modelsSchema);
+
 export default Models;

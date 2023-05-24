@@ -29,10 +29,6 @@ const specsSchema = new Schema({
     model: {
         type: mongoose.Schema.ObjectId,
         ref: 'Models'
-    },
-    specs: {
-        type: mongoose.Schema.ObjectId,
-        ref: 'Specs'
     }
 },
 { versionKey: false} );

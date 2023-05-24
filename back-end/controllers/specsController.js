@@ -17,10 +17,7 @@ export const searchSpecByModel = async (req, res) => {
             .populate({
                 path: 'model',
                 model: 'Models'
-            }).populate({
-                path: 'specs',
-                model: 'Specs'
-            });
+            })
         res.json(documents);
 
     } catch (error) {
