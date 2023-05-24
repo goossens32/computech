@@ -1,7 +1,7 @@
 /* GFONTS ROBOTO */     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 /* CDN FontAwesome*/    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto';}
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', 'Arial';}
 
 .container {
     display: flex;
@@ -165,12 +165,6 @@
     font: bold 14px 'Roboto';
 }
 
-#brand-select{
-    font: normal 14px 'Roboto';
-}
-#brand-select>option{
-    font: normal 14px 'Roboto';
-}
 
 .btn-cancel {
     margin-right: 1rem;
@@ -185,3 +179,32 @@
 
 .d-inline {display: inline;}
 .d-none {display: none;}
+
+/* LAPTOP RES MEDIA QUERIES */
+@media (max-width: 1366px) {
+    .admin-container-header h1{
+        width: 40%;
+        margin-right: 0;
+    }
+    .admin-container-header h1, .form h1{
+        font: bold 18px 'Roboto';
+    }
+    .admin-container-header .input{
+        width: 50%;
+    }
+    .form-input {
+        font: normal 12px 'Roboto';
+    }
+    .admin-list-table thead>tr>th{
+        font: bold 16px 'Roboto';
+    }
+    #tbody-container>tr>td {
+        font: normal 14px 'Roboto';
+    }
+    .card h2 {
+        font: bold 16px 'Roboto';
+    }
+    .column1, .column2 {
+        font: normal 13px 'Roboto';
+    }
+}

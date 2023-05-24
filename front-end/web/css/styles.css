@@ -120,12 +120,29 @@ header {
     border: 1px solid rgba(190, 190, 190, 0.564);
     box-shadow: 14px 16px 31px -3px rgba(0,0,0,0.1)
 }
-.cart-items {
+.cart-list-titles {
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
     align-items: center;
-    font: normal 14px 'Roboto';
+    margin-bottom: 1rem;
+    background-color: #8ab593;
+    padding: .5rem;
+    border-radius: 10px;
+} .cart-list-titles p {color: white !important;}
+.cart-item {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: .5rem;
+    padding: .5rem;
 }
+
+/* CART ITEM FLEX BASIS */
+.cart-col1{flex-basis: 60%;}
+.cart-col2{flex-basis: 5%;}
+.cart-col3{flex-basis: 25%; text-align: right;}
+.cart-col4{flex-basis: 5%;}
+
 .total-button {
     display: flex;
     align-items: center;
@@ -243,11 +260,12 @@ main {
 }
 
 .brand-list {
-    display: none;
+    display: block;
     margin-bottom: 2rem;
 }
 .brand-list>label{
-    margin-left:.5rem ;
+    margin-left:.5rem;
+    margin-bottom: 1rem;
 }
 
 /* GRID STYLES ------------------------------- */
@@ -262,6 +280,7 @@ main {
     border: 1px solid rgba(190, 190, 190, 0.564);
     border-radius: 15px;
     padding: .5rem;
+    height: 315px;
 }
 .laptop-img {
     padding: 0 !important;
@@ -279,26 +298,32 @@ main {
     height: 180px;
 }
 .card h2 {
-    margin: 1rem 0 .2rem 0;
+    margin: 1rem 0 .2rem 1rem;
     font: bold 20px 'Roboto';
 }
 .card h3 {
+    margin: .5rem 0 .2rem 1rem;
     font: normal 16px 'Roboto';
 }
 .card h4 {
-    margin: 1rem 0 .5rem 0;
     font: bold 18px 'Roboto';
     color: #6c8f73;
 }
 .card-buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+
+    margin-top: 1rem;
+}
+.card-buttons h4{
+    margin-left: 1rem;
 }
 .add-to-cart {
     color: rgb(241, 241, 241);
     background-color: #6c8f73;
     transition: .2s ease;
+    margin-right: 1rem;
 }
 .add-to-cart:hover{
     cursor: pointer;

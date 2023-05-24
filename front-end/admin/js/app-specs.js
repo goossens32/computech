@@ -94,10 +94,9 @@ const populateSpecs = (items) => {
         bodyContainer.innerHTML += `
             <div class="card">
                     <h2>${e.model.name}</h2>
-                    <h2>${e.model.brand.name}</h2>
                     <div class="columns">
                         <div class="column1">
-                            <p>Sistema Operativo: </p>
+                            <p>S.O: </p>
                             <p>Procesador: </p>
                             <p>Memoria RAM: </p>
                             <p>Almacenamiento: </p>

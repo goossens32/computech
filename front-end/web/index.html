@@ -28,14 +28,20 @@
                 <li class="li-relative">
                     <button id="cart-button"><i class="fa-solid fa-cart-shopping fa-2xl"></i></button>
                     <div class="cart-container" id="dropdown-content">
-                        <div class="cart-items"></div> 
+                        <div class="cart-list-titles">
+                            <p class="cart-col1">Modelo</p>
+                            <p class="cart-col2">Cantidad</p>
+                            <p class="cart-col3">Precio</p>
+                            <p class="cart-col4"></p>
+                        </div>
+                        <div class="cart-list"></div> 
                         <div class="total-button">
                             <div class="total">Total €</div>
                             <button>Comprar</button>
                         </div>
                     </div>
                     <div class="cart">
-                        <div class="cart-item-counter"><p>2</p></div>
+                        <div class="cart-item-counter">0</div>
                     </div>
                 </li>                
             </ul>
@@ -50,10 +56,10 @@
             <div class="order-by">
                 <label for="">Ordenar por</label>
                 <select name="" id="order-by-select">
-                    <option value="">A - Z</option>
-                    <option value="">Z - A</option>
-                    <option value="">Por precio descendente</option>
-                    <option value="">Por precio ascendente</option>
+                    <option value="1" selected>Por nombre (A - Z)</option>
+                    <option value="2">Por nombre (Z - A)</option>
+                    <option value="3">Por precio descendente</option>
+                    <option value="4">Por precio ascendente</option>
                 </select>
             </div>
 
@@ -64,18 +70,10 @@
                 <div class="brand-list">
                     
                 </div>
-            
-                <div class="filter-buttons">
-                    <button>Aplicar</button>
-                </div>
 
         </aside>
 
         <section class="grid-container"></section>
-        <div class="more-info-container">
-            <div class="more-info-title"></div>
-            <div class="more-info-specs"></div>
-        </div>
     </main>
     
 </body>

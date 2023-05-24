@@ -2,7 +2,7 @@
 /* GFONTS BebasNeue*/   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /* CDN FontAwesome*/    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto';}
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', 'Arial';}
 body {background-color: #abdeb6;}
 
 /* HEADER STYLES ------------------------------- */
@@ -49,24 +49,27 @@ header {
     width: 100%;
     background-color: #d7f5de;
 }
-.header-nav{
+.header-nav {
+    margin-left: auto;
+    margin-right: 4rem;
+}
+.header-nav ul{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-left: auto;
-
-    margin-right: 4rem;
+    list-style: none;
 }
-.header-nav a{
+.header-nav a, .header-nav ul>li p{
     font: normal 18px 'Roboto';
     color: rgb(46, 46, 46);
     text-decoration: none;
     transition: .1s ease;
 }
-.header-nav a:hover{
+.header-nav a:hover, .header-nav .user p:hover{
+    cursor: pointer;
     color: white;
 }
-
 .user {
     display: flex;
     align-items: center;
@@ -87,35 +90,8 @@ header {
     justify-content: center;
     color: #abdeb6;
 }
-.cart{
-    position: relative;
-}
-.cart-item-counter{
-    position: absolute;
-    top: 1.8rem;
-    right: -1rem;
 
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #6c8f73;
-    color: white;
-    font: bold 14px 'Roboto';
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.cart .fa-cart-shopping {
-    color: rgb(46, 46, 46);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* MAIN STYLE ------------------------------- */
+/* MAIN STYLES ------------------------------- */
 main {
     width: 96%;
     margin: .2rem auto 0 auto;
@@ -132,15 +108,16 @@ main {
 
 /* FLEX BASIS */
 .admin-menu {flex-basis: 20%;}
-.page {flex-basis: 80%; height: 800px;}
+.page {flex-basis: 80%; height: calc(100vh)}
 iframe {border: none;}
 
+/* MENU STYLES -------------------------------*/
 .admin-menu {
     padding: 3rem;
     background-color: #6c8f73;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
-    height: 800px;
+    height: calc(100vh);
 }
 .admin-menu h1 {
     font: bold 32px 'Roboto';
@@ -169,3 +146,45 @@ iframe {border: none;}
     cursor: pointer;
 }
 
+/* LAPTOP RES MEDIA QUERIES */
+@media (max-width: 1366px){
+    header {
+        height: 4rem;
+    }
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    .logo a h1 {
+       font: normal 36px 'Bebas Neue';
+    }
+    .input-header-container{
+        flex-basis: 30%;
+    }
+    .header-nav a, .header-nav ul li p {
+        font: normal 16px 'Roboto';
+    }
+    .user .fa-user{
+        width: 30px;
+        height: 30px;
+    }
+    .user i {font-size: 16px;}
+    .cart i {font-size: 26px;}
+    .cart-item-counter {
+        top: 1.5rem;
+        width: 20px;
+        height: 20px;
+        right: -.3rem;
+    } .cart-item-counter p {font: normal 14px 'Roboto' !important;}
+
+    /* Change font-size */
+    .admin-menu{
+        padding: 2rem;
+    }
+    .admin-menu h1 {
+        font: bold 26px 'Roboto';
+    }
+    .admin-menu ul li {
+        font: normal 18px 'Roboto';
+    }
+}
