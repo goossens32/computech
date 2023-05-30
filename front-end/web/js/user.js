@@ -15,9 +15,11 @@ const renderLoginForm = () => {
                 <div class="login-input"><input id="login-password-input" type="password" placeholder="Contraseña"/></div>
                 <div class="btn-login"><button id="login-button">Iniciar sesión</button></div>
                 <div class="register-text"><button id="register-button">¿No tienes usuario? Registrate</button></div>
+                <div class="error-container"></div>
             </form>
-      `;
-        // Si el usuario iniciado es admin muestra link a la página de administración
+        `;
+        const errorContainer = document.querySelector('.error-container');
+    // Si el usuario iniciado es admin muestra link a la página de administración
     } else if (userLogged == true && usernameContainer.textContent === "admin") {
         loginContainer.innerHTML = `
             <div class="admin-link"><a href="../admin/index.html"><h1>Panel de administración</h1></a></div>
@@ -84,7 +86,7 @@ const loginUser = (event) => {
             usernameContainer.innerHTML = data.user.name;
             saveSessionLS(data.user);
         } else {
-            console.log(data);
+           alert(data.message) 
         }
         renderLoginForm();
     });
@@ -99,7 +101,7 @@ const registerUser = (event) => {
     const password = document.querySelector('#password-register').value;
     const newUser = { name, surname, email, password };
     UserService.register(newUser).then(data => {
-        console.log(data);
+        alert(data.message)
     });
     renderLoginForm();
 };
