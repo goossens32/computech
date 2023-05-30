@@ -1,9 +1,20 @@
-/* GFONTS ROBOTO */     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-/* GFONTS BebasNeue*/   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-/* CDN FontAwesome*/    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+/* GFONTS ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+/* GFONTS BebasNeue*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* CDN FontAwesome*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
-* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', 'Arial';}
-body {background-color: #abdeb6;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial';
+}
+
+body {
+    background-color: #abdeb6;
+}
 
 /* HEADER STYLES ------------------------------- */
 header {
@@ -16,9 +27,17 @@ header {
 }
 
 /* FLEX BASIS */
-.logo {flex-basis: 15%;}
-.input-header-container {flex-basis: 20%;}
-.header-nav {flex-basis: 30%;}
+.logo {
+    flex-basis: 15%;
+}
+
+.input-header-container {
+    flex-basis: 20%;
+}
+
+.header-nav {
+    flex-basis: 30%;
+}
 
 .logo {
     display: flex;
@@ -26,13 +45,18 @@ header {
     justify-content: flex-start;
     margin-left: 4rem;
 }
+
 .logo img {
     width: 70px;
     height: 70px;
 
     margin: 0 1rem;
 }
-.logo a{text-decoration: none;}
+
+.logo a {
+    text-decoration: none;
+}
+
 .logo a h1 {
     font: normal 48px 'Bebas Neue';
     color: rgb(46, 46, 46);
@@ -42,6 +66,7 @@ header {
 .input-header-container {
     margin: 0 4.2rem 0 4rem;
 }
+
 .input-header-container input {
     padding: .4rem .8rem;
     border-radius: 15px;
@@ -49,42 +74,51 @@ header {
     width: 100%;
     background-color: #d7f5de;
 }
+
 .header-nav {
     margin-left: auto;
     margin-right: 4rem;
 }
-.header-nav ul{
+
+.header-nav ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-left: auto;
     list-style: none;
 }
-.header-nav a, .header-nav ul>li p{
+
+.header-nav a,
+.header-nav ul>li p {
     font: normal 18px 'Roboto';
     color: rgb(46, 46, 46);
     text-decoration: none;
     transition: .1s ease;
 }
-.header-nav a:hover, .header-nav .user p:hover{
+
+.header-nav a:hover,
+.header-nav .user p:hover {
     cursor: pointer;
     color: white;
 }
+
 .user {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
+
 .user p {
     font: normal 18px 'Roboto';
     margin-right: 1rem;
 }
-.user .fa-user{
+
+.user .fa-user {
     width: 40px;
     height: 40px;
     background-color: rgb(46, 46, 46);
     border-radius: 50%;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,29 +127,43 @@ header {
 
 /* MAIN STYLES ------------------------------- */
 main {
-    width: 96%;
+    width: 95%;
     margin: .2rem auto 0 auto;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
+    background-color: inherit;
 }
 
 /* ADMIN-CONTAINER STYLE -------------------- */
 .admin-container {
+    width: 95%;
+    margin: .2rem auto 2rem auto;
+    background-color: inherit;
+    max-height: 500px;
+
     display: grid;
     grid-template-columns: 20% 80%;
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+}
+
+.page {
     width: 100%;
 }
 
-.page{width: 100%;}
-iframe {border: none;}
+iframe {
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    max-height: 500px;
+}
 
 /* MENU STYLES -------------------------------*/
 .admin-menu {
     padding: 3rem;
     background-color: #6c8f73;
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
+    border-radius: 15px;
+    max-height: 500px;
 }
+
 .admin-menu h1 {
     font: bold 32px 'Roboto';
     color: white;
@@ -123,10 +171,12 @@ iframe {border: none;}
     text-align: center;
     margin-bottom: 2rem;
 }
-.admin-menu ul li a{
+
+.admin-menu ul li a {
     text-decoration: none;
     color: white;
 }
+
 .admin-menu ul li {
     font: normal 22px 'Roboto';
     color: white;
@@ -137,6 +187,7 @@ iframe {border: none;}
     border-radius: 15px;
     transition: .1s ease;
 }
+
 .admin-menu ul li:hover {
     background-color: #abdeb6;
     color: rgb(46, 46, 46);
@@ -144,17 +195,20 @@ iframe {border: none;}
 }
 
 /* LAPTOP RES MEDIA QUERIES */
-@media (max-width: 1366px){
+@media (max-width: 1366px) {
     header {
         height: 4rem;
     }
+
     .logo img {
         width: 50px;
         height: 50px;
     }
+
     .logo a h1 {
-       font: normal 48px 'Bebas Neue';
+        font: normal 48px 'Bebas Neue';
     }
+
     .admin-title {
         font: bold 28px 'Roboto';
         color: rgb(46, 46, 46);
@@ -162,12 +216,14 @@ iframe {border: none;}
     }
 
     /* Change font-size */
-    .admin-menu{
+    .admin-menu {
         padding: 2rem;
     }
+
     .admin-menu h1 {
         font: bold 26px 'Roboto';
     }
+
     .admin-menu ul li {
         font: normal 18px 'Roboto';
     }

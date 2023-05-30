@@ -13,6 +13,9 @@ header {
     align-items: center;
     justify-content: flex-start;
     background-color: #abdeb6;
+    position: fixed;
+    top: 0;
+    z-index: 5;
 }
 
 /* FLEX BASIS */
@@ -310,20 +313,20 @@ header {
 
 /* MAIN STYLES ------------------------------- */
 main {
-    width: 96%;
+    position: relative;
+    width: 95%;
     height: 100%;
-    margin: .2rem auto 2rem auto;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
+    margin: 5rem auto 2rem auto;
+    background-color: inherit;
 
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    align-items: flex-start;
 }
 .col {flex: 1;}
 
 /* FLEX BASIS */
-.filter-container{flex-basis: 25%;}
-.grid-container{flex-basis: 75%;}
+.filter-container{flex-basis: 25%; border-radius: 15px;}
+.grid-container{flex-basis: 75%; border-radius: 15px;}
 
 
 /* FILTER STYLES ------------------------------- */
@@ -331,7 +334,13 @@ main {
     background-color: #6c8f73;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    margin-right: 2rem;
     padding: 2rem;
+
+    position: sticky;
+    top: 5rem;
+    max-height: 500px;
+    overflow-wrap: normal;
 }
 .filter-container label {
     color: white;
@@ -397,10 +406,11 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 2rem;
+    background-color: white;
 }
 /* CARD STYLES */
 .card {
-    border: 1px solid rgba(190, 190, 190, 0.564);
+    border: 1px solid rgba(190, 190, 190, 0.278);
     border-radius: 15px;
     padding: .5rem;
     height: 315px;
