@@ -153,26 +153,13 @@ iframe {border: none;}
         height: 50px;
     }
     .logo a h1 {
-       font: normal 36px 'Bebas Neue';
+       font: normal 48px 'Bebas Neue';
     }
-    .input-header-container{
-        flex-basis: 30%;
+    .admin-title {
+        font: bold 28px 'Roboto';
+        color: rgb(46, 46, 46);
+        margin-left: 5rem;
     }
-    .header-nav a, .header-nav ul li p {
-        font: normal 16px 'Roboto';
-    }
-    .user .fa-user{
-        width: 30px;
-        height: 30px;
-    }
-    .user i {font-size: 16px;}
-    .cart i {font-size: 26px;}
-    .cart-item-counter {
-        top: 1.5rem;
-        width: 20px;
-        height: 20px;
-        right: -.3rem;
-    } .cart-item-counter p {font: normal 14px 'Roboto' !important;}
 
     /* Change font-size */
     .admin-menu{

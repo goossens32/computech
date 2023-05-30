@@ -3,6 +3,7 @@ import ModelService from "../../admin/js/services/modelServices.js";
 
 const brandFilterContainer = document.querySelector('.brand-list');
 const gridContainer = document.querySelector('.grid-container');
+const searchLaptopInput = document.querySelector('#search-laptop-input');
 const cartItemsContainer = document.querySelector('.cart-list');
 const filterOption = document.querySelector('#order-by-select');
 
@@ -87,6 +88,23 @@ const populateBrandsFilterList = () => {
     });
 }
 
+const searchLaptop = (event) => {
+    event.preventDefault();
+    const input = event.target;
+    if (input.value.length >= 3) {
+        let nameSearch = input.value.toLowerCase();
+        ModelService.searchItemByName(nameSearch).then(data => {
+            populateLaptops(data);
+        })
+        
+    } else if (input.value.length == 0) {
+        ModelService.getItemsList().then(data => {
+            populateLaptops(data);
+        })
+    }
+    
+}
+
 const addItemToCart = (id) => {
     // Consigo el nombre de modelo por ID y lo sube al array del carrito
     ModelService.getItemById(id).then(item => {
@@ -102,6 +120,9 @@ const addItemToCart = (id) => {
             cartItems.push(newItem);
             // El contador de items de carrito se va sumando cada vez que añado un item
             cartCounter = cartItems.length;
+            // LS no funciona correctamente
+            // localStorage.setItem("cart", JSON.stringify(cartItems));
+            renderCart();
         }
 
         cartTotal += price * quantity;
@@ -115,7 +136,7 @@ const removeItemFromCart = (itemName) => {
     if (itemIndex !== -1) {
         const item = cartItems[itemIndex];
         // Resta al total el precio * cantidad cuando se eliminta
-        cartTotal -= item.price * item.quantity;
+        cartTotal = cartTotal - (item.price * item.quantity);
         cartItems.splice(itemIndex, 1);
         cartCounter = cartItems.length;
         renderCart();
@@ -132,7 +153,7 @@ const renderCart = () => {
                 <p class="cart-col1">${e.name}</p>
                 <p class="cart-col2">${e.quantity}</p>
                 <p class="cart-col3">${e.price} €</p>
-                <p class="cart-col4"><button class="remove-item" data-name="${e.name}">X</button></p>
+                <p class="cart-col4"><button class="remove-item" data-name="${e.name}"><i class="fa-solid fa-xmark" style="color: #bf2632; font-size:22px;"></i></button></p>
             <div>
         `;
     });
@@ -151,6 +172,16 @@ const renderCart = () => {
     });
     cartItemCounter.textContent = cartCounter;
 }
+
+// const loadCartLS = () => {
+//     if (localStorage.getItem("cart")) {
+//         cartItems = JSON.parse (localStorage.getItem("cart"));
+//         cartCounter = cartItems.length;
+//     }
+//     else {cart = [];}
+//     renderCart();
+// }
+
 
 const handleFilter = () => {
     // Aplico filtro según el value de select>option de HTML
@@ -228,6 +259,7 @@ const handleUserDropdown = () => {
 const init = () => {
     getLaptopList();
     populateBrandsFilterList();
+    // loadCartLS();
 
     // Controladores de elementos de página
     handleBrandAccordion();
@@ -235,5 +267,6 @@ const init = () => {
     handleUserDropdown();
 
     filterOption.addEventListener('change', handleFilter);
+    searchLaptopInput.addEventListener('keyup', searchLaptop);
 }
 init();
