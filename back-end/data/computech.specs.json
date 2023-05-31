@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "646cbc719f6246995bf5da6a"
+  },
+  "os": "FreeDOS",
+  "cpu": "Intel Core i5-1235U",
+  "ram": "16GB DDR4",
+  "storage": "512GB SSD M.2",
+  "screen": "15.6\" IPS ComfyView FHD (1920 x 1080)",
+  "battery": "3 Celdas Ion de litio",
+  "model": {
+    "$oid": "646cbc389f6246995bf5da63"
+  }
+},
+{
+  "_id": {
+    "$oid": "646cd00b06f5236d83252efe"
+  },
+  "os": "Windows 11",
+  "cpu": "Intel Core i7-1255U",
+  "ram": "8GB DDR4",
+  "storage": "512GB SSD M.2",
+  "screen": "15.6\" FHD IPS",
+  "battery": "50Wh Li-ion battery",
+  "model": {
+    "$oid": "646ccfcb06f5236d83252ef6"
+  }
+}]

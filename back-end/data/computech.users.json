@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "647602dcc42cef800e1e8740"
+  },
+  "name": "admin",
+  "surname": "admin",
+  "email": "admin@computech.com",
+  "password": "$2a$10$ZFCkeBNOS4gXkG3fFOKSG.SMsse0XZgOk8r8CVdE8wpB6F8t7prI6",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64774b3f6c8a5cf2e886eec7"
+  },
+  "name": "Carlos",
+  "surname": "David",
+  "email": "carlos@gmail.com",
+  "password": "$2a$10$xHTaGgmXec9EHLJek0qz0ew2xwBBQC3j3mNpTkU75XRYut.D13E56",
+  "__v": 0
+}]

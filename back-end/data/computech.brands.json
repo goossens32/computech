@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "646394484988dfd88a1afcc4"
+  },
+  "name": "Acer",
+  "description": "Fabricante Acer"
+},
+{
+  "_id": {
+    "$oid": "646e0f99d7d8e1f7bcbd1124"
+  },
+  "name": "Apple",
+  "description": "Fabricante Apple"
+},
+{
+  "_id": {
+    "$oid": "6475f790c42cef800e1e869e"
+  },
+  "name": "MSI",
+  "description": "Fabricante MSI"
+},
+{
+  "_id": {
+    "$oid": "6475fa7ec42cef800e1e86da"
+  },
+  "name": "HP",
+  "description": "Fabricante HP"
+},
+{
+  "_id": {
+    "$oid": "6475fb40c42cef800e1e86f3"
+  },
+  "name": "Asus",
+  "description": "Fabricante Asus"
+},
+{
+  "_id": {
+    "$oid": "64774e046c8a5cf2e886eee9"
+  },
+  "name": "Gigabyte",
+  "description": "Fabricante Gigabyte"
+}]
